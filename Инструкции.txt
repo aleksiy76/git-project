@@ -19,3 +19,45 @@ git status --untracked-files=normal - показать файлы которые еще не в git (norma
 git add . - добавить все файлы
 git rm --cashed license.php удалить файл license.php 
 git rm -r --cached Git/ - удалить всю папку
+
+git commit -a -m"init" (-a -все изменненые файлы  -m"init" - это месседж - просто говорим, что это init )
+
+Если забыть поставить -m коммент то откроется окно с просьбой добавить коммент нужно его добавить потом нажать esc двоеточие и x (икс) это значит сохранить и выйти. Чтобы открывался виндовый редактор - можно посмотреть 7 урок 4 минута (Свой редактор для комментраиев)
+
+
+
+
+git log - посмотреть историю изменений
+git log --pretty=format:"%h - %an, %ar : %s" - компактный вид 
+git log --since=2.weeks - показать коммиты за 2 недели
+git log -p -2 - показ коммитов и подробными изменениями  ( -2 это два последних коммита)
+
+
+Создание новой ветки:
+git checkout -b new_f  создаем новую ветку и сразу на нее переключаемся
+git branch new_f2 создаем новую ветку, но не переключаемся на неё
+git checkout new_f - переключение на ветку new_f 
+
+
+Мерж:
+
+git config --global merge.tool kdiff3 - устанока утилиты в которой будем мержить вручную
+Скачать ее можно здесь:
+http://sourceforge.net/projects/kdiff3/files/
+После установке в баше установить
+git config --global mergetool.kdiff3.cmd '"C:\\Program Files\\KDiff3\\kdiff3" $BASE $LOCAL $REMOTE -o $MERGED'
+Подробности в 10-м уроке
+
+
+Переводим локальный репозиторий на удаленный
+https://github.com/aleksiy76/git-project
+Мой сервер на github
+
+На github есть подсказка:
+в Баше вводим:
+git remote add origin https://github.com/aleksiy76/git-project.git
+origin - название репозитория
+
+в Баше:
+git remote - выводит origin - название существующих репозиториев
+git remote -v выводит еще и путь к данным репозиториям
