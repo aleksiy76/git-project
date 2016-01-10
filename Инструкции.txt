@@ -1,0 +1,21 @@
+git init - определить папку как репозиторий git 
+git config --global user.name "aleksey" - установка имени пользователя
+git config --global user.email aleksiy76@yandex.ru - установка e-mail пользователя
+
+---------------
+Если создать текстовый файл и сохрани ег с расширением .gitignore без имени, то в нем можно указывать папки которые необходимо игнорировать
+Например 
+#folder logs
+logs/
+
+#txt-files
+docs/*.txt - игнор в папке docs файлов с расширением txt
+------------------
+
+git status - показ текущего статуса проекта
+cd docs - переход в папку docs глазами git
+git status --untracked-files=normal - показать файлы которые еще не в git (normal или all)
+
+git add . - добавить все файлы
+git rm --cashed license.php удалить файл license.php 
+git rm -r --cached Git/ - удалить всю папку
